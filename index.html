@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Major Theories of Learning — Educational Guide</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Educational Foundations &amp; Instructional Design</p>
+      <h1>Major Theories of Learning</h1>
+      <p class="subtitle">
+        An interactive guide to eight foundational learning frameworks, core mechanisms, and practical teaching applications.
+      </p>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="#explorer">Explore Theories</a>
+        <a href="#compare">Side-by-Side Comparison</a>
+        <a href="#quiz-section">Self-Check Quiz</a>
+        <a href="module.html" class="nav-highlight">Educator Training Module</a>
+        <a href="#references">APA References</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Theory Explorer Section -->
+    <section id="explorer" class="section-block" aria-labelledby="explorer-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="explorer-heading">Explore the Eight Learning Theories</h2>
+          <p class="section-desc">Search by theorist, concept, or teaching activity, or click any card to pin it to the comparison tool.</p>
+        </div>
+        <div class="search-box">
+          <label for="search-input" class="visually-hidden">Search theories</label>
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search theorist, concept, or example..."
+            autocomplete="off"
+          />
+        </div>
+      </div>
+
+      <div id="theory-grid" class="theory-grid" aria-live="polite">
+        <!-- Populated dynamically by script.js -->
+      </div>
+      <p id="no-results" class="no-results hidden">No learning theories matched your search. Try another keyword.</p>
+    </section>
+
+    <!-- Side-by-Side Comparison Section -->
+    <section id="compare" class="section-block compare-section" aria-labelledby="compare-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="compare-heading">Side-by-Side Theory Comparison</h2>
+          <p class="section-desc">Select any two theories below to contrast their core ideas, mechanisms of learning, and teaching applications.</p>
+        </div>
+      </div>
+
+      <div class="compare-controls">
+        <div class="select-group">
+          <label for="theory-select-a">Theory A</label>
+          <select id="theory-select-a"></select>
+        </div>
+
+        <button type="button" id="swap-btn" class="btn-secondary" title="Swap selected theories" aria-label="Swap Theory A and Theory B">
+          &#8644; Swap
+        </button>
+
+        <div class="select-group">
+          <label for="theory-select-b">Theory B</label>
+          <select id="theory-select-b"></select>
+        </div>
+      </div>
+
+      <div id="comparison-board" class="comparison-board" aria-live="polite">
+        <!-- Populated dynamically by script.js -->
+      </div>
+    </section>
+
+    <!-- Interactive Self-Check Quiz Section -->
+    <section id="quiz-section" class="section-block quiz-main-section" aria-labelledby="quiz-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="quiz-heading">Interactive Self-Check Quiz</h2>
+          <p class="section-desc">Test your understanding across all eight learning theories with randomized scenario-based questions.</p>
+        </div>
+      </div>
+
+      <div class="quiz-container" id="main-quiz-box">
+        <div id="main-quiz-progress" class="eyebrow" style="margin-bottom: 0.5rem; color: var(--primary);">Question 1 of 8</div>
+        <div id="main-quiz-question" class="quiz-question">Loading question...</div>
+        <div id="main-quiz-options" class="quiz-options"></div>
+        <div id="main-quiz-feedback" class="quiz-feedback hidden"></div>
+        
+        <div class="quiz-nav-row">
+          <span id="main-quiz-score" style="font-weight: 600; font-size: 0.9rem;">Score: 0 / 0</span>
+          <button type="button" id="main-next-btn" class="btn-primary hidden">Next Question →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- References Section -->
+    <section id="references" class="section-block references-section" aria-labelledby="references-heading">
+      <h2 id="references-heading">References</h2>
+      <ul class="apa-list">
+        <li>Bruner, J. S., &amp; Anglin, J. M. (1973). <em>Beyond the information given: Studies in the psychology of knowing</em>. W. W. Norton &amp; Company.</li>
+        <li>Dewey, J. (1997). <em>Experience and education</em>. Touchstone. (Original work published 1938)</li>
+        <li>Ertmer, P. A., &amp; Newby, T. J. (1993). Behaviorism, cognitivism, constructivism: Comparing critical features from an instructional design perspective. <em>Performance Improvement Quarterly</em>, 6(4), 50–72.</li>
+        <li>Gallagher, J. M., &amp; Reid, D. K. (2002). <em>The learning theory of Piaget and Inhelder</em>. iUniverse.</li>
+        <li>González, N., Moll, L. C., &amp; Amanti, C. (Eds.). (2005). <em>Funds of knowledge: Theorizing practices in households, communities, and classrooms</em> (Chs. 1, 2, 4, 14, &amp; 15). Lawrence Erlbaum Associates.</li>
+        <li>Lave, J., &amp; Wenger, E. (1991). <em>Situated learning: Legitimate peripheral participation</em>. Cambridge University Press.</li>
+        <li>Vygotsky, L. S. (1978). <em>Mind in society: The development of higher psychological processes</em>. Harvard University Press.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        Created by <strong>Kellie Albert</strong> &bull;
+        <a
+          href="https://creativecommons.org/licenses/by-nc/4.0/"
+          target="_blank"
+          rel="license noopener noreferrer"
+        >
+          Licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+        </a>
+      </p>
+      <p class="footer-note">
+        You are free to share and adapt this educational resource for non-commercial purposes with appropriate attribution.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

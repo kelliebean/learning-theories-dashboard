@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educator Training Module: Constructivism vs. Sociocultural Theory</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Professional Development Module</p>
+      <h1>Cognitive Constructivism &amp; Sociocultural Theory</h1>
+      <p class="subtitle">
+        An interactive training guide for educators comparing internal cognitive conflict (Piaget) with socially mediated scaffolding (Vygotsky).
+      </p>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html">← Return to Main Guide</a>
+        <a href="#objectives">Learning Objectives</a>
+        <a href="#explanation">Explanation</a>
+        <a href="#activity">Interactive Scenario Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="module-content">
+      
+      <!-- Learning Objectives -->
+      <section id="objectives" class="objectives-box">
+        <h3>Learning Objectives for Educators</h3>
+        <ul>
+          <li><strong>Differentiate</strong> between Piaget's independent cognitive disequilibrium and Vygotsky's socially mediated Zone of Proximal Development (ZPD).</li>
+          <li><strong>Analyze</strong> real-world classroom scenarios to identify which underlying psychological framework drives student learning.</li>
+          <li><strong>Design</strong> lesson activities that intentionally incorporate either active schema accommodation or peer/expert scaffolding.</li>
+        </ul>
+      </section>
+
+      <!-- Explanation -->
+      <section id="explanation">
+        <h2>Deconstructing Two Pillars of Constructivism</h2>
+        <p>
+          While both Piaget and Vygotsky agree that learners actively build their own understanding rather than passively absorbing lectures, their core mechanisms for *how* that learning happens differ fundamentally:
+        </p>
+        <p>
+          <strong>Cognitive Constructivism (Jean Piaget):</strong> Piaget viewed the child as a "lone scientist." Learning is driven from within by <em>equilibration</em>. When a learner encounters something that contradicts their existing mental models (disequilibrium), they undergo <em>accommodation</em>—restructuring their internal schema to restore mental balance. The primary catalyst is direct physical or mental interaction with materials.
+        </p>
+        <p>
+          <strong>Sociocultural Theory (Lev Vygotsky):</strong> Vygotsky viewed learning as fundamentally social and cultural. Higher mental functions appear first on the social plane between people (interpsychological) before being internalized by the individual (intrapsychological). Learning is catalyzed by a More Knowledgeable Other (MKO) providing guidance within the learner's <em>Zone of Proximal Development (ZPD)</em>.
+        </p>
+
+        <!-- Diagram / Visual with Attribution -->
+        <figure class="media-figure">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Students collaborating around a table in a bright classroom" />
+          <figcaption>
+            <strong>Figure 1.</strong> Comparing independent exploration with social collaboration in modern instructional design. 
+            <em>Photo by</em> <a href="https://unsplash.com/@element5digital" target="_blank" rel="noopener noreferrer">Element5 Digital</a> on Unsplash. Adapted under license.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Interactive Activity -->
+      <section id="activity" class="section-block">
+        <h2>Interactive Activity: "Which Theory Explains This?"</h2>
+        <p class="section-desc">
+          Test your pedagogical discernment by reviewing each classroom scenario below and selecting whether it is primarily driven by <strong>Cognitive Constructivism (Piaget)</strong> or <strong>Sociocultural Theory (Vygotsky)</strong>.
+        </p>
+
+        <div class="quiz-container" id="quiz-box">
+          <div id="quiz-progress" class="eyebrow" style="margin-bottom: 0.5rem; color: var(--primary);">Question 1 of 3</div>
+          <div id="quiz-question" class="quiz-question">Loading question...</div>
+          <div id="quiz-options" class="quiz-options"></div>
+          <div id="quiz-feedback" class="quiz-feedback hidden"></div>
+          
+          <div class="quiz-nav-row">
+            <span id="quiz-score" style="font-weight: 600; font-size: 0.9rem;">Score: 0 / 0</span>
+            <button type="button" id="next-btn" class="btn-primary hidden">Next Scenario →</button>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        Created by <strong>Kellie Albert</strong> &bull;
+        <a
+          href="https://creativecommons.org/licenses/by-nc/4.0/"
+          target="_blank"
+          rel="license noopener noreferrer"
+        >
+          Licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+        </a>
+      </p>
+      <p class="footer-note">
+        Professional development resource for educators and instructional designers.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const quizData = [
+      {
+        question: "Scenario A: Young students are given a balance scale and various weights. They realize small objects can be heavier than large ones, causing mental confusion that prompts them to revise their understanding of density.",
+        options: [
+          { text: "Cognitive Constructivism (Jean Piaget)", correct: true, explanation: "Correct! This is a textbook example of disequilibrium and accommodation, where students independently resolve cognitive conflict through physical manipulation of objects." },
+          { text: "Sociocultural Theory (Lev Vygotsky)", correct: false, explanation: "Incorrect. While hands-on, the primary catalyst here is internal cognitive conflict and schema restructuring (Piaget), rather than guided social dialogue with an MKO." }
+        ]
+      },
+      {
+        question: "Scenario B: A clay artist visits a classroom, demonstrates hand-building a vessel while answering questions, and then circulates to provide tailored verbal and hands-on guidance as students shape their own pots.",
+        options: [
+          { text: "Cognitive Constructivism (Jean Piaget)", correct: false, explanation: "Incorrect. This scenario relies heavily on expert modeling, dialogue, and scaffolding within the Zone of Proximal Development." },
+          { text: "Sociocultural Theory (Lev Vygotsky)", correct: true, explanation: "Correct! Learning begins on the social plane between the artist and the children (interpsychological) through guided participation before internalization." }
+        ]
+      },
+      {
+        question: "Scenario C: A teacher provides bilingual students with collaborative sentence-starter frames ('Our evidence shows _____ because _____') so small groups can co-construct scientific arguments before writing solo essays.",
+        options: [
+          { text: "Cognitive Constructivism (Jean Piaget)", correct: false, explanation: "Incorrect. The sentence frames act as cultural and linguistic tools bridging social discourse with individual mastery." },
+          { text: "Sociocultural Theory (Lev Vygotsky)", correct: true, explanation: "Correct! Providing structured language frames and peer group collaboration is a classic application of cultural tool mediation and ZPD scaffolding." }
+        ]
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let answered = false;
+
+    const questionEl = document.getElementById("quiz-question");
+    const optionsEl = document.getElementById("quiz-options");
+    const feedbackEl = document.getElementById("quiz-feedback");
+    const nextBtn = document.getElementById("next-btn");
+    const progressEl = document.getElementById("quiz-progress");
+    const scoreEl = document.getElementById("quiz-score");
+
+    function loadQuestion() {
+      answered = false;
+      feedbackEl.className = "quiz-feedback hidden";
+      feedbackEl.textContent = "";
+      nextBtn.classList.add("hidden");
+
+      const q = quizData[currentQuestion];
+      progressEl.textContent = `Question ${currentQuestion + 1} of ${quizData.length}`;
+      questionEl.textContent = q.question;
+      optionsEl.innerHTML = "";
+
+      q.options.forEach((opt, idx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "quiz-btn";
+        btn.textContent = opt.text;
+        btn.addEventListener("click", () => selectOption(opt, btn));
+        optionsEl.appendChild(btn);
+      });
+    }
+
+    function selectOption(selectedOpt, btnElement) {
+      if (answered) return;
+      answered = true;
+
+      const allBtns = optionsEl.querySelectorAll(".quiz-btn");
+      allBtns.forEach((b) => (b.disabled = true));
+
+      const q = quizData[currentQuestion];
+
+      if (selectedOpt.correct) {
+        btnElement.classList.add("correct");
+        feedbackEl.className = "quiz-feedback success";
+        score++;
+      } else {
+        btnElement.classList.add("incorrect");
+        feedbackEl.className = "quiz-feedback error";
+        // Highlight correct one
+        allBtns.forEach((b, i) => {
+          if (q.options[i].correct) b.classList.add("correct");
+        });
+      }
+
+      feedbackEl.textContent = selectedOpt.explanation;
+      scoreEl.textContent = `Score: ${score} / ${quizData.length}`;
+
+      if (currentQuestion < quizData.length - 1) {
+        nextBtn.textContent = "Next Scenario →";
+      } else {
+        nextBtn.textContent = "View Final Results 🏆";
+      }
+      nextBtn.classList.remove("hidden");
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentQuestion++;
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        // Quiz completed
+        progressEl.textContent = "Module Activity Completed!";
+        questionEl.textContent = `Training Complete! You scored ${score} out of ${quizData.length} correct.`;
+        optionsEl.innerHTML = `<p style="font-size: 1.05rem; margin: 1rem 0;">You have successfully completed this educator comparison module on Piaget and Vygotsky. Feel free to review the main guide or retake the scenarios!</p>`;
+        feedbackEl.classList.add("hidden");
+        nextBtn.textContent = "Retake Activity";
+        nextBtn.onclick = () => {
+          currentQuestion = 0;
+          score = 0;
+          nextBtn.onclick = null;
+          loadQuestion();
+        };
+      }
+    });
+
+    loadQuestion();
+  </script>
+</body>
+</html>
