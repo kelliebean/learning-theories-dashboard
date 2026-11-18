@@ -3,83 +3,355 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Educator Training Module: Constructivism vs. Sociocultural Theory</title>
+  <title>Educator Training Portal — All Eight Learning Theories</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Additional styles for the multi-module portal tabs */
+    .module-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .mod-tab-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--primary-dark);
+      padding: 0.65rem 0.85rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+    .mod-tab-btn:hover {
+      background: var(--surface-alt);
+      border-color: var(--primary);
+    }
+    .mod-tab-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+    .theory-module-pane {
+      display: none;
+    }
+    .theory-module-pane.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <p class="eyebrow">Professional Development Module</p>
-      <h1>Cognitive Constructivism &amp; Sociocultural Theory</h1>
+      <p class="eyebrow">Professional Development Training Portal</p>
+      <h1>Educator Modules: All Eight Learning Theories</h1>
       <p class="subtitle">
-        An interactive training guide for educators comparing internal cognitive conflict (Piaget) with socially mediated scaffolding (Vygotsky).
+        A peer training guide providing objectives, plain-language explanations, visual aids, and interactive scenario checks for all foundational learning frameworks.
       </p>
       <nav class="main-nav" aria-label="Primary Navigation">
         <a href="index.html">← Return to Main Guide</a>
-        <a href="#objectives">Learning Objectives</a>
-        <a href="#explanation">Explanation</a>
-        <a href="#activity">Interactive Scenario Quiz</a>
+        <a href="index.html#quiz-section">Self-Check Quiz</a>
+        <a href="index.html#references">APA References</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <article class="module-content">
-      
-      <!-- Learning Objectives -->
-      <section id="objectives" class="objectives-box">
-        <h3>Learning Objectives for Educators</h3>
-        <ul>
-          <li><strong>Differentiate</strong> between Piaget's independent cognitive disequilibrium and Vygotsky's socially mediated Zone of Proximal Development (ZPD).</li>
-          <li><strong>Analyze</strong> real-world classroom scenarios to identify which underlying psychological framework drives student learning.</li>
-          <li><strong>Design</strong> lesson activities that intentionally incorporate either active schema accommodation or peer/expert scaffolding.</li>
-        </ul>
-      </section>
+    <section class="section-block">
+      <div class="section-header">
+        <div>
+          <h2>Select a Theory Module</h2>
+          <p class="section-desc">Click any theory below to access its dedicated peer training module.</p>
+        </div>
+      </div>
 
-      <!-- Explanation -->
-      <section id="explanation">
-        <h2>Deconstructing Two Pillars of Constructivism</h2>
-        <p>
-          While both Piaget and Vygotsky agree that learners actively build their own understanding rather than passively absorbing lectures, their core mechanisms for *how* that learning happens differ fundamentally:
-        </p>
-        <p>
-          <strong>Cognitive Constructivism (Jean Piaget):</strong> Piaget viewed the child as a "lone scientist." Learning is driven from within by <em>equilibration</em>. When a learner encounters something that contradicts their existing mental models (disequilibrium), they undergo <em>accommodation</em>—restructuring their internal schema to restore mental balance. The primary catalyst is direct physical or mental interaction with materials.
-        </p>
-        <p>
-          <strong>Sociocultural Theory (Lev Vygotsky):</strong> Vygotsky viewed learning as fundamentally social and cultural. Higher mental functions appear first on the social plane between people (interpsychological) before being internalized by the individual (intrapsychological). Learning is catalyzed by a More Knowledgeable Other (MKO) providing guidance within the learner's <em>Zone of Proximal Development (ZPD)</em>.
-        </p>
+      <!-- Theory Selector Tabs -->
+      <div class="module-nav-grid" id="module-tabs">
+        <button type="button" class="mod-tab-btn active" data-target="mod-1">1. Behaviorism</button>
+        <button type="button" class="mod-tab-btn" data-target="mod-2">2. Cognitivism</button>
+        <button type="button" class="mod-tab-btn" data-target="mod-3">3. Experiential Learning</button>
+        <button type="button" class="mod-tab-btn" data-target="mod-4">4. Cognitive Constructivism</button>
+        <button type="button" class="mod-tab-btn" data-target="mod-5">5. Discovery &amp; Scaffolding</button>
+        <button type="button" class="mod-tab-btn" data-target="mod-6">6. Sociocultural Theory</button>
+        <button type="button" class="mod-tab-btn" data-target="mod-7">7. Situated Learning</button>
+        <button type="button" class="mod-tab-btn" data-target="mod-8">8. Funds of Knowledge</button>
+      </div>
 
-        <!-- Diagram / Visual with Attribution -->
+      <!-- MODULE 1: BEHAVIORISM -->
+      <div id="mod-1" class="theory-module-pane active module-content">
+        <span class="card-badge">Module #1</span>
+        <h2>Behaviorism (Skinner, Pavlov, Thorndike)</h2>
+        
+        <div class="objectives-box">
+          <h3>Learning Objectives for Educators</h3>
+          <ul>
+            <li>Identify observable stimuli and reinforcement loops in instructional design.</li>
+            <li>Structure immediate feedback mechanisms to reinforce desired skill mastery.</li>
+          </ul>
+        </div>
+
+        <h3>Educator Overview</h3>
+        <p>Behaviorism posits that learning is an observable change in behavior shaped entirely by environmental stimuli, reinforcement, and consequences. Rather than focusing on internal mental states, instructors design structured tasks where correct responses receive immediate positive reinforcement (praise, digital badges, points), extinguishing unreinforced actions over time.</p>
+
         <figure class="media-figure">
-          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Students collaborating around a table in a bright classroom" />
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80" alt="Person studying with digital tablet and notes" />
           <figcaption>
-            <strong>Figure 1.</strong> Comparing independent exploration with social collaboration in modern instructional design. 
-            <em>Photo by</em> <a href="https://unsplash.com/@element5digital" target="_blank" rel="noopener noreferrer">Element5 Digital</a> on Unsplash. Adapted under license.
+            <strong>Figure 1.</strong> Structured practice and prompt performance feedback loops. 
+            <em>Photo by</em> <a href="https://unsplash.com/@benchaccounting" target="_blank" rel="noopener noreferrer">Bench Accounting</a> on Unsplash.
           </figcaption>
         </figure>
-      </section>
 
-      <!-- Interactive Activity -->
-      <section id="activity" class="section-block">
-        <h2>Interactive Activity: "Which Theory Explains This?"</h2>
-        <p class="section-desc">
-          Test your pedagogical discernment by reviewing each classroom scenario below and selecting whether it is primarily driven by <strong>Cognitive Constructivism (Piaget)</strong> or <strong>Sociocultural Theory (Vygotsky)</strong>.
-        </p>
-
-        <div class="quiz-container" id="quiz-box">
-          <div id="quiz-progress" class="eyebrow" style="margin-bottom: 0.5rem; color: var(--primary);">Question 1 of 3</div>
-          <div id="quiz-question" class="quiz-question">Loading question...</div>
-          <div id="quiz-options" class="quiz-options"></div>
-          <div id="quiz-feedback" class="quiz-feedback hidden"></div>
-          
-          <div class="quiz-nav-row">
-            <span id="quiz-score" style="font-weight: 600; font-size: 0.9rem;">Score: 0 / 0</span>
-            <button type="button" id="next-btn" class="btn-primary hidden">Next Scenario →</button>
+        <div class="quiz-container">
+          <div class="quiz-question">Scenario Check: An online training module automatically awards learners a digital certificate and points upon completing a safety checklist correctly. Which mechanism is this?</div>
+          <div class="quiz-options">
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, true, 'Correct! Positive reinforcement strengthens stimulus-response associations in behaviorism.')">Positive Reinforcement &amp; Behaviorism</button>
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, false, 'Incorrect. This relies on outward rewards rather than internal schema construction.')">Cognitive Constructivism</button>
           </div>
+          <div class="quiz-feedback hidden"></div>
         </div>
-      </section>
+      </div>
 
-    </article>
+      <!-- MODULE 2: COGNITIVISM -->
+      <div id="mod-2" class="theory-module-pane module-content">
+        <span class="card-badge">Module #2</span>
+        <h2>Cognitivism (Gagné, Neisser, Anderson)</h2>
+        
+        <div class="objectives-box">
+          <h3>Learning Objectives for Educators</h3>
+          <ul>
+            <li>Design instructional hooks that activate prior knowledge and existing schemas.</li>
+            <li>Organize complex content into manageable chunks to optimize working memory retrieval.</li>
+          </ul>
+        </div>
+
+        <h3>Educator Overview</h3>
+        <p>Cognitivism treats the human mind like a high-powered computer. Learning is an internal mental process where incoming information is encoded, categorized, organized into existing mental schemata, and stored in long-term memory. Instructors bridge unfamiliar concepts by explicitly linking them to students' prior knowledge.</p>
+
+        <figure class="media-figure">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Laptop showing data charts and digital organization" />
+          <figcaption>
+            <strong>Figure 2.</strong> Organizing information structures to aid memory encoding. 
+            <em>Photo by</em> <a href="https://unsplash.com/@christinhumephoto" target="_blank" rel="noopener noreferrer">Christin Hume</a> on Unsplash.
+          </figcaption>
+        </figure>
+
+        <div class="quiz-container">
+          <div class="quiz-question">Scenario Check: Before introducing how gills extract oxygen from water, a science teacher reviews how human lungs exchange oxygen from air. What is this instructional strategy?</div>
+          <div class="quiz-options">
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, false, 'Incorrect.')">Behaviorist Conditioning</button>
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, true, 'Correct! Linking prior knowledge to anchor new information is a core pillar of cognitivism.')">Activating Prior Knowledge (Cognitivism)</button>
+          </div>
+          <div class="quiz-feedback hidden"></div>
+        </div>
+      </div>
+
+      <!-- MODULE 3: EXPERIENTIAL LEARNING -->
+      <div id="mod-3" class="theory-module-pane module-content">
+        <span class="card-badge">Module #3</span>
+        <h2>Experiential Learning (John Dewey)</h2>
+        
+        <div class="objectives-box">
+          <h3>Learning Objectives for Educators</h3>
+          <ul>
+            <li>Create hands-on problem-solving tasks coupled with guided reflection.</li>
+            <li>Connect abstract textbook principles directly to tangible real-world experiments.</li>
+          </ul>
+        </div>
+
+        <h3>Educator Overview</h3>
+        <p>John Dewey's progressive education emphasizes that genuine learning requires active, purposeful experience combined with critical reflection. Through the principles of *continuity* (how experiences shape future learning) and *interaction*, students encounter authentic problems, form hypotheses, test solutions, and reflect on outcomes.</p>
+
+        <figure class="media-figure">
+          <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80" alt="Science experiment with beakers and liquids" />
+          <figcaption>
+            <strong>Figure 3.</strong> Hands-on experimentation bridging theory and practice. 
+            <em>Photo by</em> <a href="https://unsplash.com/@osman_rana" target="_blank" rel="noopener noreferrer">Osman Rana</a> on Unsplash.
+          </figcaption>
+        </figure>
+
+        <div class="quiz-container">
+          <div class="quiz-question">Scenario Check: After reading about acids and bases, students mix baking soda and vinegar to observe the fizzing reaction firsthand and reflect on results. Whose framework is this?</div>
+          <div class="quiz-options">
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, true, 'Correct! Dewey emphasized active hands-on experience coupled with reflection.')">John Dewey (Experiential Learning)</button>
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, false, 'Incorrect.')">B.F. Skinner (Behaviorism)</button>
+          </div>
+          <div class="quiz-feedback hidden"></div>
+        </div>
+      </div>
+
+      <!-- MODULE 4: COGNITIVE CONSTRUCTIVISM -->
+      <div id="mod-4" class="theory-module-pane module-content">
+        <span class="card-badge">Module #4</span>
+        <h2>Cognitive Constructivism (Piaget &amp; Inhelder)</h2>
+        
+        <div class="objectives-box">
+          <h3>Learning Objectives for Educators</h3>
+          <ul>
+            <li>Elicit student misconceptions to foster productive cognitive conflict (disequilibrium).</li>
+            <li>Design exploratory tasks that require schema assimilation and accommodation.</li>
+          </ul>
+        </div>
+
+        <h3>Educator Overview</h3>
+        <p>Jean Piaget viewed learners as active builders of their own knowledge. When new evidence contradicts existing mental models (*disequilibrium*), students experience cognitive conflict and must either *assimilate* the data or *accommodate* by restructuring their mental schema to restore equilibrium.</p>
+
+        <figure class="media-figure">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80" alt="Student engaging in hands-on building and measuring" />
+          <figcaption>
+            <strong>Figure 4.</strong> Encountering physical disequilibrium through measurement and testing. 
+            <em>Photo by</em> <a href="https://unsplash.com/@thisisengineering" target="_blank" rel="noopener noreferrer">ThisIsEngineering</a> on Unsplash.
+          </figcaption>
+        </figure>
+
+        <div class="quiz-container">
+          <div class="quiz-question">Scenario Check: Students weigh various objects and realize small objects can be heavier than large ones, creating confusion that forces them to revise their understanding of density. What is this?</div>
+          <div class="quiz-options">
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, false, 'Incorrect.')">Operant Conditioning</button>
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, true, 'Correct! This is cognitive conflict leading to schema accommodation (Piaget).')">Disequilibrium &amp; Accommodation (Piaget)</button>
+          </div>
+          <div class="quiz-feedback hidden"></div>
+        </div>
+      </div>
+
+      <!-- MODULE 5: DISCOVERY LEARNING & SCAFFOLDING -->
+      <div id="mod-5" class="theory-module-pane module-content">
+        <span class="card-badge">Module #5</span>
+        <h2>Discovery Learning &amp; Scaffolding (Jerome Bruner)</h2>
+        
+        <div class="objectives-box">
+          <h3>Learning Objectives for Educators</h3>
+          <ul>
+            <li>Guide learners to go "beyond the information given" to discover underlying principles.</li>
+            <li>Structure spiral curricula that revisit core concepts across enactive, iconic, and symbolic modes.</li>
+          </ul>
+        </div>
+
+        <h3>Educator Overview</h3>
+        <p>Jerome Bruner argued that instruction should encourage learners to discover principles on their own. By translating ideas across physical actions (*enactive*), visual diagrams (*iconic*), and language/symbols (*symbolic*), teachers provide structured intuition and spiral back to core concepts with increasing depth.</p>
+
+        <figure class="media-figure">
+          <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=900&q=80" alt="Teacher guiding young students with art and paint supplies" />
+          <figcaption>
+            <strong>Figure 5.</strong> Guided discovery through hands-on creative exploration. 
+            <em>Photo by</em> <a href="https://unsplash.com/@element5digital" target="_blank" rel="noopener noreferrer">Element5 Digital</a> on Unsplash.
+          </figcaption>
+        </figure>
+
+        <div class="quiz-container">
+          <div class="quiz-question">Scenario Check: A teacher tells students that mixing primary colors produces new colors, then gives them paint to mix and discover secondary colors independently. Whose model is this?</div>
+          <div class="quiz-options">
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, true, 'Correct! Bruner emphasized active discovery learning and going beyond given information.')">Jerome Bruner (Discovery Learning)</button>
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, false, 'Incorrect.')">Jean Piaget</button>
+          </div>
+          <div class="quiz-feedback hidden"></div>
+        </div>
+      </div>
+
+      <!-- MODULE 6: SOCIOCULTURAL THEORY -->
+      <div id="mod-6" class="theory-module-pane module-content">
+        <span class="card-badge">Module #6</span>
+        <h2>Sociocultural Theory (Lev Vygotsky)</h2>
+        
+        <div class="objectives-box">
+          <h3>Learning Objectives for Educators</h3>
+          <ul>
+            <li>Incorporate social dialogue and More Knowledgeable Others (MKOs) into lessons.</li>
+            <li>Provide targeted scaffolding within each student's Zone of Proximal Development (ZPD).</li>
+          </ul>
+        </div>
+
+        <h3>Educator Overview</h3>
+        <p>Vygotsky demonstrated that cognitive development begins socially (*interpsychological*) before being internalized (*intrapsychological*), mediated by language and cultural tools. Effective instruction happens within the *Zone of Proximal Development (ZPD)* with expert scaffolding.</p>
+
+        <figure class="media-figure">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Collaborative group working together around a laptop" />
+          <figcaption>
+            <strong>Figure 6.</strong> Social collaboration and expert scaffolding in the ZPD. 
+            <em>Photo by</em> <a href="https://unsplash.com/@scottgraham" target="_blank" rel="noopener noreferrer">Scott Graham</a> on Unsplash.
+          </figcaption>
+        </figure>
+
+        <div class="quiz-container">
+          <div class="quiz-question">Scenario Check: A clay artist demonstrates hand-building, answers questions, and guides students as they shape vessels within their ZPD. Which theory is this?</div>
+          <div class="quiz-options">
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, false, 'Incorrect.')">Behaviorism</button>
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, true, 'Correct! Social modeling and ZPD guidance are hallmarks of Vygotsky’s Sociocultural Theory.')">Sociocultural Theory (Vygotsky)</button>
+          </div>
+          <div class="quiz-feedback hidden"></div>
+        </div>
+      </div>
+
+      <!-- MODULE 7: SITUATED LEARNING -->
+      <div id="mod-7" class="theory-module-pane module-content">
+        <span class="card-badge">Module #7</span>
+        <h2>Situated Learning &amp; Communities of Practice (Lave &amp; Wenger)</h2>
+        
+        <div class="objectives-box">
+          <h3>Learning Objectives for Educators</h3>
+          <ul>
+            <li>Design authentic, real-world community tasks rather than isolated textbook problems.</li>
+            <li>Support Legitimate Peripheral Participation (LPP) where newcomers transition to full members.</li>
+          </ul>
+        </div>
+
+        <h3>Educator Overview</h3>
+        <p>Situated learning views knowledge as inseparable from social practice and culture. Newcomers enter a *Community of Practice* through *Legitimate Peripheral Participation (LPP)*—performing low-risk, authentic tasks alongside experienced practitioners before graduating to full participation.</p>
+
+        <figure class="media-figure">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80" alt="Professionals collaborating in a modern workspace" />
+          <figcaption>
+            <strong>Figure 7.</strong> Legitimate Peripheral Participation in an active community of practice. 
+            <em>Photo by</em> <a href="https://unsplash.com/@fauxels" target="_blank" rel="noopener noreferrer">Fauxels</a> on Unsplash.
+          </figcaption>
+        </figure>
+
+        <div class="quiz-container">
+          <div class="quiz-question">Scenario Check: Students explore the Scratch community, inspect code written by experienced creators, and perform a low-risk remix. Which framework describes this?</div>
+          <div class="quiz-options">
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, true, 'Correct! Remixing community artifacts is a classic application of LPP in a community of practice.')">Situated Learning &amp; Communities of Practice (Lave &amp; Wenger)</button>
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, false, 'Incorrect.')">Discovery Learning</button>
+          </div>
+          <div class="quiz-feedback hidden"></div>
+        </div>
+      </div>
+
+      <!-- MODULE 8: FUNDS OF KNOWLEDGE -->
+      <div id="mod-8" class="theory-module-pane module-content">
+        <span class="card-badge">Module #8</span>
+        <h2>Funds of Knowledge (González, Moll, &amp; Amanti)</h2>
+        
+        <div class="objectives-box">
+          <h3>Learning Objectives for Educators</h3>
+          <ul>
+            <li>Conduct ethnographic inquiries (visitas) to uncover household and cultural labor practices.</li>
+            <li>Design curriculum that bridges students' lived household expertise with academic standards.</li>
+          </ul>
+        </div>
+
+        <h3>Educator Overview</h3>
+        <p>Funds of knowledge recognizes that historically marginalized households possess rich, accumulated practical and cultural assets. When teachers act as ethnographic researchers, they bridge students' household strengths directly into rigorous academic instruction, countering deficit perspectives.</p>
+
+        <figure class="media-figure">
+          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=80" alt="Diverse community members sharing stories and culture" />
+          <figcaption>
+            <strong>Figure 8.</strong> Valuing household and community cultural assets in education. 
+            <em>Photo by</em> <a href="https://unsplash.com/@mentatdgt" target="_blank" rel="noopener noreferrer">Mentatdgt</a> on Unsplash.
+          </figcaption>
+        </figure>
+
+        <div class="quiz-container">
+          <div class="quiz-question">Scenario Check: A teacher assigns a project where students list household members, roles, and chores, using that information to connect home skills to curriculum. What is this?</div>
+          <div class="quiz-options">
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, false, 'Incorrect.')">Sociocultural Theory</button>
+            <button type="button" class="quiz-btn" onclick="checkAnswer(this, true, 'Correct! Utilizing household and cultural practices as academic assets is Funds of Knowledge.')">Funds of Knowledge (González et al.)</button>
+          </div>
+          <div class="quiz-feedback hidden"></div>
+        </div>
+      </div>
+
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -95,122 +367,47 @@
         </a>
       </p>
       <p class="footer-note">
-        Professional development resource for educators and instructional designers.
+        Professional development training portal for educators and instructional designers.
       </p>
     </div>
   </footer>
 
   <script>
-    const quizData = [
-      {
-        question: "Scenario A: Young students are given a balance scale and various weights. They realize small objects can be heavier than large ones, causing mental confusion that prompts them to revise their understanding of density.",
-        options: [
-          { text: "Cognitive Constructivism (Jean Piaget)", correct: true, explanation: "Correct! This is a textbook example of disequilibrium and accommodation, where students independently resolve cognitive conflict through physical manipulation of objects." },
-          { text: "Sociocultural Theory (Lev Vygotsky)", correct: false, explanation: "Incorrect. While hands-on, the primary catalyst here is internal cognitive conflict and schema restructuring (Piaget), rather than guided social dialogue with an MKO." }
-        ]
-      },
-      {
-        question: "Scenario B: A clay artist visits a classroom, demonstrates hand-building a vessel while answering questions, and then circulates to provide tailored verbal and hands-on guidance as students shape their own pots.",
-        options: [
-          { text: "Cognitive Constructivism (Jean Piaget)", correct: false, explanation: "Incorrect. This scenario relies heavily on expert modeling, dialogue, and scaffolding within the Zone of Proximal Development." },
-          { text: "Sociocultural Theory (Lev Vygotsky)", correct: true, explanation: "Correct! Learning begins on the social plane between the artist and the children (interpsychological) through guided participation before internalization." }
-        ]
-      },
-      {
-        question: "Scenario C: A teacher provides bilingual students with collaborative sentence-starter frames ('Our evidence shows _____ because _____') so small groups can co-construct scientific arguments before writing solo essays.",
-        options: [
-          { text: "Cognitive Constructivism (Jean Piaget)", correct: false, explanation: "Incorrect. The sentence frames act as cultural and linguistic tools bridging social discourse with individual mastery." },
-          { text: "Sociocultural Theory (Lev Vygotsky)", correct: true, explanation: "Correct! Providing structured language frames and peer group collaboration is a classic application of cultural tool mediation and ZPD scaffolding." }
-        ]
-      }
-    ];
+    // Tab switching logic for module.html
+    const tabButtons = document.querySelectorAll(".mod-tab-btn");
+    const panes = document.querySelectorAll(".theory-module-pane");
 
-    let currentQuestion = 0;
-    let score = 0;
-    let answered = false;
+    tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabButtons.forEach(b => b.classList.remove("active"));
+        panes.forEach(p => p.classList.remove("active"));
 
-    const questionEl = document.getElementById("quiz-question");
-    const optionsEl = document.getElementById("quiz-options");
-    const feedbackEl = document.getElementById("quiz-feedback");
-    const nextBtn = document.getElementById("next-btn");
-    const progressEl = document.getElementById("quiz-progress");
-    const scoreEl = document.getElementById("quiz-score");
-
-    function loadQuestion() {
-      answered = false;
-      feedbackEl.className = "quiz-feedback hidden";
-      feedbackEl.textContent = "";
-      nextBtn.classList.add("hidden");
-
-      const q = quizData[currentQuestion];
-      progressEl.textContent = `Question ${currentQuestion + 1} of ${quizData.length}`;
-      questionEl.textContent = q.question;
-      optionsEl.innerHTML = "";
-
-      q.options.forEach((opt, idx) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "quiz-btn";
-        btn.textContent = opt.text;
-        btn.addEventListener("click", () => selectOption(opt, btn));
-        optionsEl.appendChild(btn);
+        btn.classList.add("active");
+        const targetId = btn.getAttribute("data-target");
+        document.getElementById(targetId).classList.add("active");
+        window.scrollTo({ top: 300, behavior: "smooth" });
       });
-    }
-
-    function selectOption(selectedOpt, btnElement) {
-      if (answered) return;
-      answered = true;
-
-      const allBtns = optionsEl.querySelectorAll(".quiz-btn");
-      allBtns.forEach((b) => (b.disabled = true));
-
-      const q = quizData[currentQuestion];
-
-      if (selectedOpt.correct) {
-        btnElement.classList.add("correct");
-        feedbackEl.className = "quiz-feedback success";
-        score++;
-      } else {
-        btnElement.classList.add("incorrect");
-        feedbackEl.className = "quiz-feedback error";
-        // Highlight correct one
-        allBtns.forEach((b, i) => {
-          if (q.options[i].correct) b.classList.add("correct");
-        });
-      }
-
-      feedbackEl.textContent = selectedOpt.explanation;
-      scoreEl.textContent = `Score: ${score} / ${quizData.length}`;
-
-      if (currentQuestion < quizData.length - 1) {
-        nextBtn.textContent = "Next Scenario →";
-      } else {
-        nextBtn.textContent = "View Final Results 🏆";
-      }
-      nextBtn.classList.remove("hidden");
-    }
-
-    nextBtn.addEventListener("click", () => {
-      currentQuestion++;
-      if (currentQuestion < quizData.length) {
-        loadQuestion();
-      } else {
-        // Quiz completed
-        progressEl.textContent = "Module Activity Completed!";
-        questionEl.textContent = `Training Complete! You scored ${score} out of ${quizData.length} correct.`;
-        optionsEl.innerHTML = `<p style="font-size: 1.05rem; margin: 1rem 0;">You have successfully completed this educator comparison module on Piaget and Vygotsky. Feel free to review the main guide or retake the scenarios!</p>`;
-        feedbackEl.classList.add("hidden");
-        nextBtn.textContent = "Retake Activity";
-        nextBtn.onclick = () => {
-          currentQuestion = 0;
-          score = 0;
-          nextBtn.onclick = null;
-          loadQuestion();
-        };
-      }
     });
 
-    loadQuestion();
+    // Simple interactive answer checker for module scenario checks
+    function checkAnswer(buttonEl, isCorrect, explanationText) {
+      const container = buttonEl.closest(".quiz-container");
+      const allBtns = container.querySelectorAll(".quiz-btn");
+      const feedbackEl = container.querySelector(".quiz-feedback");
+
+      allBtns.forEach(b => b.disabled = true);
+
+      if (isCorrect) {
+        buttonEl.classList.add("correct");
+        feedbackEl.className = "quiz-feedback success";
+      } else {
+        buttonEl.classList.add("incorrect");
+        feedbackEl.className = "quiz-feedback error";
+      }
+
+      feedbackEl.textContent = explanationText;
+      feedbackEl.classList.remove("hidden");
+    }
   </script>
 </body>
 </html>
