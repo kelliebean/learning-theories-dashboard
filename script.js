@@ -284,6 +284,7 @@ function loadMainQuiz() {
 
   const q = mainQuizData[mainCurrentQ];
   mainProgEl.textContent = `Question ${mainCurrentQ + 1} of ${mainQuizData.length}`;
+  mainScoreEl.textContent = `Score: ${mainScore} / ${mainQuizData.length}`;
   mainQEl.textContent = q.question;
   mainOptEl.innerHTML = "";
 
@@ -337,7 +338,7 @@ if (mainNextBtn) {
     } else {
       mainProgEl.textContent = "Self-Check Quiz Completed!";
       mainQEl.textContent = `Great job! You scored ${mainScore} out of ${mainQuizData.length} correct.`;
-      mainOptEl.innerHTML = `<p style="font-size: 1.05rem; margin: 1rem 0;">You have successfully tested your knowledge across all eight foundational learning theories. Feel free to review the theory cards or retake the quiz!</p>`;
+      mainOptEl.innerHTML = `<p class="quiz-summary-text">You have successfully tested your knowledge across all eight foundational learning theories. Feel free to review the theory cards or retake the quiz!</p>`;
       mainFeedEl.classList.add("hidden");
       mainNextBtn.textContent = "Retake Quiz";
       mainNextBtn.onclick = () => {
